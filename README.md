@@ -1,5 +1,7 @@
 <img src="https://github.com/leee-SeungHyeon/Aiffelthon_FnGuide_Project/assets/123627186/17d501a2-547d-49bb-a327-9b5807149185" style="float: left;">
+
 모두의 연구소 AIFFEL과 주식 시장에 관련된 데이터와 정보를 제공하는 회사인 FnGuide와 함께 진행한 프로젝트
+
 <br>
 
 # Team: FNpatch
