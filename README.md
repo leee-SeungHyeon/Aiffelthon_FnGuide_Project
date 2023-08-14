@@ -1,3 +1,3 @@
-<div align="left">
-    <img src="img/fn가이드_로고.jpg" alt="fnguide_logo">
-</div>
+<p align="left">
+    <img src="./img/fnguide_logo.jpg" alt="fnguide_logo">
+</p>
