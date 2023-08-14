@@ -10,7 +10,7 @@
 
 |이름|역할|
 |---|---|
-|이승현|금융 뉴스 긍/부정 판별 Task 담당, Reference 조사,데이터 가공,Data Augmetation 구현,모델링,모델 훈련,결과 분석|
+|이승현|금융 뉴스 긍/부정 판별 Task 담당,Reference 조사,데이터 가공,Data Augmetation 구현,모델링,모델 훈련,결과 분석|
 |박성우|광고/금융 뉴스 판별 Task 담당, Reference 조사,데이터 가공,Data Augmetation 구현,모델링,모델 훈련,결과 분석|
 
 ## 1. 프로젝트 개요
@@ -34,3 +34,4 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 * 뉴스 데이터의 레이블에 불균형이 존재하기 때문에 __다양한 데이터 증강기법에 초점을 맞춰 프로젝트를 진행하고자 함__
 
 ## 3. 프로젝트 프로세스
+![project process](./img/project_process.png)
