@@ -6,6 +6,7 @@
 
 # Team: FNpatch
 <br>
+
 |이름|역할|
 |---|---|
 |이승현|금융 뉴스 긍/부정 판별 Task 담당, Reference 조사,데이터 가공,Data Augmetation 구현,모델링,모델 훈련,결과 분석|
