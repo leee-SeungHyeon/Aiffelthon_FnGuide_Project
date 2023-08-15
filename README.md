@@ -164,17 +164,17 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 ||수정 전|수정 후|
 |---|---|---|
-|Positive|4800|4789|
-|Negative|3598|3562|
-|total|8398|8351|
+|Positive|4800|__4789__|
+|Negative|3598|__3562__|
+|total|8398|__8351__|
 
 * 금융 및 광고 뉴스
 
 ||수정 전|수정 후|
 |---|---|---|
-|Finance|3200|3176|
-|AD|2230|2235|
-|total|5430|5411|
+|Finance|3200|__3176__|
+|AD|2230|__2235__|
+|total|5430|__5411__|
 
 * 데이터의 문제는 협의하에 label을 교체하였으며, 이전의 실험 결과는 문제가 있는 데이터로 수행하였기 때문에 수정된 데이터로 다시 모든 실험을 진행함
 
@@ -217,7 +217,7 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 |Rank|Augumentation|Accuracy|Negative F1|Positive F1|
 |---|---|---|---|---|
-|1|Baseline|98.47|0.98|0.99|
+|__1__|__Baseline__|__98.47__|__0.98__|__0.99__|
 |2|Fill Masked |98.38|0.98|0.99|
 |3|KOR EDA + Back Translation|98.19|0.98|0.98|
 |4|KOR EDA|98|0.98|0.98|
@@ -226,8 +226,8 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 |Rank|Augumentation|Accuracy|Finance F1|AD F1|
 |---|---|---|---|---|
-|1|Mix Documents|96.91|0.96|0.97|
-|1|KOR EDA|96.91|0.96|0.97|
+|__1__|__Mix Documents__|__96.91__|__0.96__|__0.97__|
+|__1__|__KOR EDA__|__96.91__|__0.96__|__0.97__|
 |3|Summarize Sentence + Mix Documents|96.76|0.96|0.97|
 |3|Summarize Sentence + KOR EDA|96.76|0.96|0.97|
 
@@ -242,7 +242,7 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 |Rank|Augumentation|Accuracy|Negative F1|Positive F1|
 |---|---|---|---|---|
-|1|Mix Documents + Back Translation|98.57|0.98|0.99|
+|__1__|__Mix Documents + Back Translation__|__98.57__|__0.98__|__0.99__|
 |2|Fill Masked |98.38|0.98|0.99|
 |2|Back Translation|98.38|0.98|0.99|
 |4|Summarize Sentence + Fill Masked|98.19|0.98|0.98|
@@ -251,7 +251,7 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 |Rank|Augumentation|Accuracy|Finance F1|AD F1|
 |---|---|---|---|---|
-|1|Mix Documents + Back Translation|97.05|0.97|0.97|
+|__1__|__Mix Documents + Back Translation__|__97.05__|__0.97__|__0.97__|
 |2|Summarize Sentence + Back Translation|96.91|0.96|0.97|
 |3|Mix Documents|96.76|0.96|0.97|
 |3|Summarize Sentence + Mix Documents|96.76|0.96|0.97|
@@ -261,7 +261,7 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 |Rank|Model|Augumentation|Accuracy|Negative F1|Positive F1|
 |---|---|---|---|---|---|
-|1|Kfdeberta-base|Mix Documents + Back Translation|98.57|0.98|0.98|
+|__1__|__Kfdeberta-base__|__Mix Documents + Back Translation__|__98.57__|__0.98__|__0.99__|
 |2|klue/Roberta-base|None|98.47|0.98|0.99|
 |3|klue/Roberta-base|Fill Masked|98.38|0.98|0.99|
 |3|kfdeberta-base|Fill Masked|98.38|0.98|0.99|
@@ -270,7 +270,7 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 |Rank|Model|Augumentation|Accuracy|Negative F1|Positive F1|
 |---|---|---|---|---|---|
-|1|Kfdeberta-base|Mix Documents + Back Translation|97.05|0.97|0.97|
+|__1__|__Kfdeberta-base__|__Mix Documents + Back Translation__|__97.05__|__0.97__|__0.97__|
 |2|klue/Roberta-base|Mix Documents|96.91|0.96|0.97|
 |2|klue/Roberta-base|KOR EDA|96.91|0.96|0.97|
 |2|kfdeberta-base|Summarize Sentence + Back Translation|96.91|0.96|0.97|
