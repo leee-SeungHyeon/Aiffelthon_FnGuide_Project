@@ -35,6 +35,9 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 ## 3. 프로젝트 프로세스
 ![project process](./img/project_process.png)
+* 각 데이터에 대해 중복 제거 및 표준어 전처리 진행
+* 논문과 깃허브를 참고하여 다양한 증강 기법 코드 구현
+* 각 증강기법에 맞춰 데이터를 증강 시킨 후 모델 평가
 
 ## 4. Baseline Model 선정
 ### 4-1. snunlp/KR-FinBert
@@ -77,3 +80,29 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 |KR-FinBert |96.17|0.97|
 
 * 두 데이터에서 모두 __klue/roberta-base의 성능이 가장 좋았기 때문에 baseline 모델로 선정__
+
+
+## 5. Data Augmentation 기법
+<p align="center">
+  <img src="./img/augmentation.png" alt="augmentation">
+</p>
+
+### 5-1. KOR_EDA Augmentation
+* SR, RI, RS, RD의 4가지 기법을 사용하여 데이터 증강
+* [사진 예시 넣기]
+
+### 5-2. Mix Documents Augmentation
+* kss 라이브러리를 통하여 문장을 분리한 후 2개의 뉴스 지문을 설정한 비율만큼 섞어서 새로운 뉴스 데이터 생성(Mix documents)
+* 1개의 뉴스 지문내에서 문장을 설정한 비율만큼 랜덤하게 섞어서 새로운 뉴스 데이터 생성(Document Shuffle)
+* [사진 예시 넣기]
+
+### 5-3. Back Translation Augmentation
+* 기존의 한국어 뉴스를 영어로 번역 후 다시 한국어로 재번역하는 방법
+* 구글 번역 API를 사용하기 위해 googletrans 라이브러리 사용
+* [사진 예시 넣기]
+
+### 5-4. Fill Masked Model Augmentation
+* 원문장의 임의의 토큰을 마스킹하고, MLM 방식으로 해당 마스크 문장을 예측하여 새로운 토큰을 생성해내는 방식
+* 또한 [SEP], [PAD] 등과 같은 의미가 없는 토큰이 예측되지 않도록 코드로 구현
+* 사전학습 모델은 긴 지문에 강점을 보이는 Kobigbird-base를 사용함
+* [예시 넣기]
