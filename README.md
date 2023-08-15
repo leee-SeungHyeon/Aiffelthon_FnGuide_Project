@@ -89,20 +89,47 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 ### 5-1. KOR_EDA Augmentation
 * SR, RI, RS, RD의 4가지 기법을 사용하여 데이터 증강
-* [사진 예시 넣기]
+
+|Method|Description|
+|---|---|
+|Sysnonym Replacement(SR)|Stop Words가 아닌 단어들 중에서 랜덤으로 선택해서 유의어 교체|
+|Random Insertion(RI)|하나의 단어를 선택하고 그 단어의 유의어를 문장내의 임의의 위치에 삽입|
+|Random Swap(RS)|랜덤으로 두개의 단어를 선택해서 위치를 바꿔줌|
+|Random Deletion(RD)|P의 확률값을 가지고 문장 내의 각 단어를 제거|
 
 ### 5-2. Mix Documents Augmentation
 * kss 라이브러리를 통하여 문장을 분리한 후 2개의 뉴스 지문을 설정한 비율만큼 섞어서 새로운 뉴스 데이터 생성(Mix documents)
 * 1개의 뉴스 지문내에서 문장을 설정한 비율만큼 랜덤하게 섞어서 새로운 뉴스 데이터 생성(Document Shuffle)
-* [사진 예시 넣기]
+<img src="./img/mix_doc.png" alt="mix_doc">
 
 ### 5-3. Back Translation Augmentation
 * 기존의 한국어 뉴스를 영어로 번역 후 다시 한국어로 재번역하는 방법
 * 구글 번역 API를 사용하기 위해 googletrans 라이브러리 사용
-* [사진 예시 넣기]
+<img src="./img/back_trans.png" alt="back_trans">
 
 ### 5-4. Fill Masked Model Augmentation
 * 원문장의 임의의 토큰을 마스킹하고, MLM 방식으로 해당 마스크 문장을 예측하여 새로운 토큰을 생성해내는 방식
 * 또한 [SEP], [PAD] 등과 같은 의미가 없는 토큰이 예측되지 않도록 코드로 구현
 * 사전학습 모델은 긴 지문에 강점을 보이는 Kobigbird-base를 사용함
-* [예시 넣기]
+<img src="./img/fill_masked.png" alt="fill_masked">
+
+## 모델 테스트 결과
+* 부족한 label인 __부정 데이터 1200개와 광고 데이터 1000개를 각각 증강__ 시킨 후 테스트 하였음
+
+### 긍정 및 부정 뉴스
+|Augmentation|Accuracy|
+|---|---|
+|baseline|98.37|
+|Mix_Doc|97.71|
+|Back_Trans|97.9|
+|KOR_EDA|98.09|
+|__Fill_Masked__|__98.47__|
+
+### 금융 및 광고 뉴스
+|Augmentation|Accuracy|
+|---|---|
+|baseline|96.31|
+|Mix_Doc|96.32|
+|Back_Trans|96.17|
+|KOR_EDA|96.91|
+|__Fill_Masked__|__97.49__|
