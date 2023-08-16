@@ -104,7 +104,7 @@ FnGuide에서 자체 제작한 국내 주요 400여개 기업에 대한 label된
 
 ### 5-3. Back Translation Augmentation
 * 기존의 한국어 뉴스를 영어로 번역 후 다시 한국어로 재번역하는 방법
-* 구글 번역 API를 사용하기 위해 googletrans 라이브러리 사용
+* ktextaug 패키지를 사용하여 구현
 <img src="./img/back_trans.png" alt="back_trans">
 
 ### 5-4. Fill Masked Model Augmentation
